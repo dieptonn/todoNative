@@ -1,0 +1,77 @@
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import { StatusBar } from 'expo-status-bar'
+
+const App = () => {
+  return (
+    <View style={styles.container}>
+        <View style={styles.top}>
+            <Text style={styles.text1}>Top Left</Text>
+        </View>
+        <View style={styles.bot}>
+            <View style ={styles.botLeft}>
+                <Text style={styles.text1}>Bot Left</Text>
+            </View>
+            <View style ={styles.botRight}>
+                <View style={styles.botRightUp}>
+                    <Text style={[styles.text1,styles.text2]}>Right up</Text>
+                </View>
+                <View style={styles.botRightDown}>
+                    <Text style={styles.text2}>Right down</Text>
+                </View>
+            </View>
+        </View>
+    </View>
+  )
+}
+
+export default App
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+    top: {
+        flex: 1,
+        backgroundColor: "#F3FE7D",
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    bot: {
+        flex: 1,
+        // backgroundColor: "red",
+        flexDirection: 'row',
+    },
+
+    text1: {
+        fontWeight: "bold",
+        color: '#68B5B1',
+        fontSize: 24,
+    },
+    text2: {
+        fontWeight: "bold",
+        fontSize: 27,
+        color: 'white',
+    },
+    botLeft :{
+        backgroundColor: '#36E577',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    botRight: {
+        flex: 1,
+    },
+    botRightUp: {
+        backgroundColor: '#ED35E6',
+        flex: 2,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    botRightDown: {
+        backgroundColor: '#2673A6',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
+})
