@@ -5,6 +5,7 @@ import {
     TouchableOpacity,
     ScrollView,
     Alert,
+    StatusBar,
 } from 'react-native';
 import React, { useState } from 'react';
 
@@ -34,7 +35,13 @@ const App = () => {
         ]);
     };
     return (
+        
         <View style={styles.container}>
+            <StatusBar
+                barStyle="dark-content" // Kiểu hiển thị của nội dung trong thanh công cụ
+                backgroundColor="#E8F0F2" // Màu nền cho thanh công cụ
+                translucent={true} // Đặt thành true nếu bạn muốn thanh công cụ trong suốt
+        />
             <View style={styles.body}>
                 <Text style={styles.header}>Todo List</Text>
                 <ScrollView style={styles.items}>

@@ -20,7 +20,8 @@
                 "foregroundImage": "./assets/adaptive-icon.png",
                 "backgroundColor": "#ffffff"
             },
-            "package": "com.diepton.AwesomeProject"
+            "package": "com.diepton.AwesomeProject",
+            "port": 3000
         },
         "web": {
             "favicon": "./assets/favicon.png"
@@ -30,5 +31,6 @@
                 "projectId": "ba472284-9943-4559-baa0-dea61eb28c7e"
             }
         }
+        
     }
 }
